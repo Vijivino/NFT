@@ -1,0 +1,6 @@
+how to view file - cat viji.file
+how to search fo a keyword - grep employee filename
+how to list files in direct - ls lrt
+how to change directory - cd
+
+

@@ -1,0 +1,70 @@
+Linux commands 
+https://www.guru99.com/must-know-linux-commands.html
+https://www.crio.do/blog/20-basic-linux-commands/
+
+//list files
+ls              = list all files directories
+ls-R            = list all directories and subdirectories
+ls-a            = list hidden files that starts with period "."
+ls-al           = list all files with all info
+
+//create and view files
+cat>filename    = create a file
+  enter the input content for your file
+  press ctrl+d to come out of the file
+cat filename    = to view the created file
+cat -n filename = to display the lines with line nos
+cat file1 file2 >newfilename = to combine 2 files and create 3rd file
+rm filename     = to remove file
+
+//move and rename files
+for moving a file from 1 dir to other location need sudo access which requires pwd authentiction
+You only need root/sudo privileges, only if the command involves files or directories not owned by the user or group running the commands
+sudo mv file1 /home/users/vijaylaxmi/documents = moving a file 
+mv file1 File1      = to rename a file
+
+//create and remove ,rename  directory
+mkdir dirname      = to creat dir in the home direc
+mkdir /tmp/dirname = to create dir in other direct
+rmdir dirnmae      = to remove direc
+mv dirname Dirname = rename the direct
+
+//other important commands
+man ls            = to display the documnetation/usermanual for that particular command
+ls --help         = to display relevant onformation of that command
+cd desktp/linux   = to change dir from home dir
+cd..              = to change back to home directory
+touch file1.txt   = to create a file without content
+pwd               = to print the full path of the working direc(PrintWorkingDirectory)
+echo "hello"      = to print that string in the arguments(for debugging purpose we use this command)
+echo -e "hey\nHi" = to print in lines
+wget URL          = to download app from that Url
+cp file1 file2    = cotent of file2 copied into file1(overwritten)
+tree              = to display content of direc in a tree structure
+grep -i 'hello' file1 = to search the word hello in file1 and print
+grep -c 'hello' file1 = to print the no.of occurances of that word hello
+vi filename      = to edit content in Vim editor / add content in a file
+head -n 5 file1  = to print first 5 lines of content in file1
+tail -n 5 file1  = to print last 5 lines 
+history          = to view history of previous commands
+locate           = Find a file in the database.
+ln               = Create shortcuts to other files
+clear            = Clear terminal 
+sort             = sort the file content
+cal              = View Calendar in terminal
+whereis          = View the exact location of any command types after this command
+df               = Check the details of the file system
+wc               = Check the lines, word count, and characters in a file using different options 
+
+hwinfo           =hardware info
+ifconfig         =network configuration
+uname -m         =print the machine hardware name
+cat/etc/os-release      =OS version 
+free -g                 =RAM info
+cat/proc/cpuinfo/grep -i processor  = CPU info
+fdisk -l         = HDD info
+chronyc sources  = NTP info(Network Time Protocol)
+ps -ef |grep-i tls = check what are the apps running in that system
+
+
+

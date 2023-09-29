@@ -1,0 +1,102 @@
+//LoadRunner
+https://www.softwaretestinghelp.com/hp-loadrunner-load-testing-tool-training-tutorials/
+https://www.softwaretestinghelp.com/loadrunner/vugen-script-loadrunner/
+https://www.guru99.com/operational-testing.html
+https://www.guru99.com/understanding-vugen-in-loadrunner.html
+https://www.interviewbit.com/loadrunner-interview-questions/
+
+
+Correlation is done for the dynamic value or the value returned by server for any request.
+
+-Manual correlation and automated correlation follow the same steps.
+In Manual Correlation, we have to identify the dynamic value.WDiff compare two scripts line by line and then identify the dynamic value
+and capture it from the response of previous request.  
+Replace dynamic value with parameter name manually everywhere in the script.
+
+-Automated Correlation works with existing rules.
+Correlation function web_reg_save_param is used for capturing the value for correlation. 
+web_reg_save_param_ex 
+web_reg_save_param_regexp.
+The mandatory attributes of correlation function web_reg_save_param are parameter name, left boundary (LB) and right boundary (RB).
+
+Prameterization is done for the static values or thr value given by the users.
+Parameterization takes care of user input data whereas correlation takes care of data returned by server.
+Default parameter type is file.
+select next row - sequential, random, unique
+update value on - each iteration, each occurence, once
+
+Rendezvous point- It helps to perform the user actions simultaneously.
+If we have a scenario where a larger number of users perform an action simultaneously on the application
+and if we have to simulate the same in our performance test, we can use a ‘Rendezvous point’.
+
+Functions 
+LoadRuuner fuctions***
+1) lr_eval_string(): this function returns the input string after evaluating any embedded parameters.
+3) lr_save_string(): this function assigns a value to the LR parameter/variable.
+5) lr_paramarr_random(): this function randomly selects one of the values from a parameter array.
+6) lr_paramarr_len(): This function returns the number of elements in a parameter array.
+7) lr_paramarr_idx(): This function gives the value of the parameter at a specified location in a parameter array. 
+8) lr_db_connect(): This is a database function that is used to connect to a database.
+9) lr_db_disconnect(): This is a database function that is used to disconnect from a database.
+10) lr_start_transaction() and lr_end_transaction(): As already seen, these functions are used to start and end (respectively) a transaction.
+17) lr_abort(): The function instructs the Vuser to stop executing the Action section and end the execution by executing the vuser_end section.
+                It is helpful in handling a specific error.
+
+Protocol specififc functions**
+2) web_submit_form(): This function submits a form. And this function is recorded only in the HTML mode and submits a context-sensitive request
+3) web_submit_data(): This function submits a ‘context-less’ form. This function is recorded only in URL–based recording mode.
+6) web_reg_save_param(): this is a boundary based correlation function.
+7) web_reg_save_param_ex(): This is also a boundary based correlation function which is a improved version of the web_reg_save_param function.
+8) web_reg_find(): As already seen, this function is used for text check.
+9) web_image_check(): this function is used for image check.
+10) web_convert_param(): This function is used to convert HTML text to plain text or URL, or plain text to URL. 
+11) web_get_int_property(): This function returns specific information (like the status code, download size etc.) about the previous HTTP request.
+13) web_cache_cleanup(): This function is used to clear the cache. In the runtime settings-Browser Emulation tab, if ‘Simulate a new user each iteration’ is enabled, 
+    then this function is automatically called at the beginning of each iteration.
+14) web_cleanup_cookies(): This function clears all the cookies that are currently stored by the Vuser.
+15) web_add_cookie(): This function adds a new cookie.
+
+C functions***
+1) strcpy(): This function copies one string to another.
+2) strcmp(): This function compares two strings and returns a value that indicates the lexicographical relation between them 
+3) strlen(): This function returns the length of a string in bytes.
+4) strcat(): This function concatenates two strings.
+5) strtok(): As already seen, this function returns a token from a string delimited by specified characters.
+6) atoi(): As already seen, this function converts a C string into a C integer.
+7) atof(): This function converts a C string into a C float.
+8) itoa(): This function converts a C integer to a C string.
+
+//select random data
+(web_reg_save_param) with ‘ORD=ALL’
+strcpy(flightVal,lr_eval_string(lr_paramarr_random("cFlight")));
+
+//if condition
+if(atoi(lr_eval_string("{WelcomeCount}"))>0)
+
+{
+lr_end_transaction("Login",LR_PASS);
+}
+
+else
+{
+lr_end_transaction("Login",LR_FAIL);
+}
+
+//performance
+• Hands on experience in developing scripts using Load Runner (Web Http/Html, Web services).
+• Extensive experience in scripting enhancements like Parameterization, Correlation, Transaction insertion and error handling.
+• Expertise in creating and executing the scenarios in Performance Center/Controller as application demands and provide test results with observations/suggestions.
+• Expertise in conducting performance tests like Load test, Soak test, Stress test and Failover test. 
+• Expertise in working with application teams and the client to analyze risks and develop performance test plan. 
+• Expertise in designing the performance tests with the required workload mix for various business scenarios and functional flows. 
+• Experience in non-functional testing using CCA, JAWS (Accessibility/Compatibility testing) and mobile accessibility testing. 
+• Strong understanding of performance test activities such as requirement gathering, test planning, designing, building scripts and scenarios, creating test data, executing the tests and preparing test reports. 
+• Expertise in defect tracking using ALM and JIRA. 
+• Experience in efficiently coordinating daily project activities, project updates, etc. with the onsite counterpart/client/application teams.
+//AI
+.Gather and analyze the NFT requirements in order to assess the features like reliability and recoverability of the application
+.Experience on Test planning/Strategizing, Non Functional Studies, Quality Reviews, Entry & Exit Criteria acceptance
+
+Analyze business requirements and prepare test scenarios,test cases and test scripts and Executing test scripts in framework using TestNG and cucumber.
+
+
